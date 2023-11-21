@@ -1,5 +1,14 @@
 plugins {
     id("java")
+    id("pl.allegro.tech.build.axion-release") version "1.15.5"
+}
+
+scmVersion {
+    // we want uncommitted changes to make a difference to versions
+    ignoreUncommittedChanges = false;
+    tag {
+        prefix = 'release-'
+    }
 }
 
 group = "org.yi"
